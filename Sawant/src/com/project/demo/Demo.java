@@ -2,7 +2,10 @@ package com.project.demo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class Demo {
 
@@ -14,8 +17,14 @@ public class Demo {
 	list.add("Rushikesh");
 	list.add("Gayatri");
 	
-	for ( String g : list) {
-		System.out.println(g);
+	
+	Map<String, List<String>> map = new HashMap<String, List<String>>();
+	map.put("Group W members :",list);
+	
+	Set<String> set = map.keySet();
+	for (Object o: set) {
+		System.out.println(o);
+		System.out.println(map.get(o));
 	}
 
 	}
